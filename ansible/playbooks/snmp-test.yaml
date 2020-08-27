@@ -6,7 +6,7 @@
     - name: "TASK 1: GATHER FACTS VIA SNMP"
       snmp_facts:
         host: "{{ ansible_host }}"
-        version: v3
+        version: v2
         level: authPriv
         integrity: sha
         privacy: aes
