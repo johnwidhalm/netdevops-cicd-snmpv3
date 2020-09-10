@@ -25,6 +25,7 @@ install-deps: ## Install pip
 .PHONY: add-venv
 add-venv: ## Install virtualenv, create virtualenv, install requirements
 	pip install virtualenv
+	export PATH=$PATH:/var/lib/jenkins/.local/lib/python2.7/site-package/virtualenv
 	which virtualenv
 	virtualenv -p /usr/bin/python venv
 	#virtualenv venv
