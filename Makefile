@@ -25,8 +25,8 @@ install-deps: ## Install pip
 .PHONY: add-venv
 add-venv: ## Install virtualenv, create virtualenv, install requirements
 	pip install virtualenv
-	#virtualenv -p /usr/bin/python venv
-	virtualenv venv
+	virtualenv -p /usr/bin/python venv
+	#virtualenv venv
 	. ./venv/bin/activate
 	@echo installing requirements.txt ...
 	@venv/bin/pip install -q -r ./requirements.txt
