@@ -17,15 +17,16 @@ help:
 .PHONY: install-deps
 install-deps: ## Install pip
 	apt-get update -y
-	curl https://bootstrap.pypa.io/get-pip.py --output get-pip.py
-	sudo python2 get-pip.py
-	pip --version
-	#apt-get install pip -y
+	#curl https://bootstrap.pypa.io/get-pip.py --output get-pip.py
+	#sudo python2 get-pip.py
+	#pip --version
+	apt-get install pip -y
 
 .PHONY: add-venv
 add-venv: ## Install virtualenv, create virtualenv, install requirements
 	pip install virtualenv
-	virtualenv -p /usr/bin/python venv
+	#virtualenv -p /usr/bin/python venv
+	virtualenv venv
 	. ./venv/bin/activate
 	@echo installing requirements.txt ...
 	@venv/bin/pip install -q -r ./requirements.txt
