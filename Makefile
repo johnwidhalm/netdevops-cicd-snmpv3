@@ -27,6 +27,7 @@ add-venv: ## Install virtualenv, create virtualenv, install requirements
 	pip install virtualenv
 	# Installed manually . . .sudo pip install virtualenv
 	which virtualenv
+	export PYTHONWARNINGS=ignore::UserWarning
 	virtualenv -p /usr/bin/python venv
 	#virtualenv venv
 	. ./venv/bin/activate
